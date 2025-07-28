@@ -7,6 +7,9 @@ import Footer from "./components/footer";
 const Layout = ({ children }: { children: React.ReactNode }) => {
   return (
     <html>
+      <head>
+        <title> AICE </title>
+      </head>
       <body>
         <Head>
           <title>AICE</title>
