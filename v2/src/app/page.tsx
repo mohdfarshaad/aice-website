@@ -1,32 +1,30 @@
-import {
-  ArrowRight,
-  Calendar,
-  Rocket,
-  Handshake,
-  Lightbulb,
-} from "lucide-react";
+import { Calendar, Rocket, Handshake, Lightbulb } from "lucide-react";
 import Link from "next/link";
 
 export default function Home() {
   return (
     <>
       {/* Hero Section with Background Image */}
-      <section
-        className="bg-cover bg-center text-white py-20"
-        style={{
-          width: "100%",
-          backgroundImage:
-            'linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("/images/mjpc2.jpg")',
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-        }}
-      >
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-28 text-center">
+      <section className="relative w-full h-screen overflow-hidden text-white">
+        {/* Background Video */}
+        <video
+          className="absolute top-0 left-0 w-full h-full object-cover z-0"
+          autoPlay
+          loop
+          muted
+          playsInline
+        >
+          <source src="/video/Mjpc.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+
+        {/* Hero Content */}
+        {/* <div className="relative z-20 flex flex-col items-center justify-center h-full text-center px-4">
           <h1 className="text-4xl md:text-6xl font-bold mb-4">
             Association of Innovative
             <span className="block text-yellow-400">Computer Engineers</span>
           </h1>
-          <p className="text-lg md:text-2xl text-blue-100 mb-8">
+          <p className="text-lg md:text-2xl text-blue-100 mb-8 max-w-2xl">
             Bridging academics and industry through innovation, collaboration,
             and real-world experience.
           </p>
@@ -36,7 +34,6 @@ export default function Home() {
               className="bg-green-500 hover:bg-green-600 px-8 py-3 rounded-lg font-semibold flex items-center justify-center gap-2"
             >
               View Events
-              <ArrowRight size={20} />
             </Link>
             <Link
               href="/gallery"
@@ -45,7 +42,7 @@ export default function Home() {
               Explore Gallery
             </Link>
           </div>
-        </div>
+        </div> */}
       </section>
 
       {/* About & Features Section */}

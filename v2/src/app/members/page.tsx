@@ -16,7 +16,7 @@ export default function Members() {
           role: "Joint Secretary",
           image: "members/muhsin.jpg",
         },
-        { name: "Rohan", role: "Treasurer", image: "members/rohan.jpg" },
+        { name: "Rohan", role: "Treasurer", image: "members/rohan.jpeg" },
       ],
     },
     {
@@ -32,7 +32,7 @@ export default function Members() {
       team: "Creative Team",
       members: [
         { name: "Jishad", role: "Lead", image: "members/jishad.jpg" },
-        { name: "Sudharshan", role: "Member" },
+        { name: "Sudharshan", role: "Member", image: "members/sudharshan.jpg" },
         {
           name: "Shamil Mubarak",
           role: "Member",
@@ -46,7 +46,7 @@ export default function Members() {
       members: [
         { name: "Nihal", role: "Lead", image: "members/nihal.jpg" },
         { name: "Sufiyan", role: "Member", image: "members/sufiyan.jpg" },
-        { name: "Fuad Sanin", role: "Member" },
+        { name: "Fuad Sanin", role: "Member", image: "members/fuad.jpeg" },
         { name: "Ammar Khais", role: "Member", image: "members/ammar.jpg" },
       ],
     },
@@ -66,7 +66,7 @@ export default function Members() {
         { name: "Sinan", role: "Member", image: "members/sinan.jpg" },
         { name: "Rajih", role: "Member", image: "members/rajih.jpg" },
         { name: "Rinsha", role: "Member", image: "members/rinsha.jpg" },
-        { name: "Shamil", role: "Member", image: "members/shamil.jpg" },
+        { name: "Shamil", role: "Member", image: "members/shamil.jpeg" },
       ],
     },
   ];
@@ -84,9 +84,9 @@ export default function Members() {
               {team.team}
             </h2>
             <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-4 gap-6">
-              {team.members.map((member, idx) => (
+              {team.members.map((member, index) => (
                 <div
-                  key={idx}
+                  key={index}
                   className="bg-white rounded-lg shadow p-4 flex flex-col items-center text-center"
                 >
                   <div className="w-24 h-24 rounded-full overflow-hidden mb-4">
